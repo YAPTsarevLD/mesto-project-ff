@@ -10,13 +10,14 @@ const placesList = document.querySelector(".places__list"); //элемент, в
 
   function createCard(name, link) { //объявляем функцию, которая принимает в аргументы name и link
     
-    const cardElement = cardTemplate.cloneNode(true); //клонируем шаблон
+    const cardElement  = cardTemplate.querySelector('.card').cloneNode(true); //клонируем шаблон
     const cardImage = cardElement.querySelector(".card__image"); //изображение карточки внутри шаблона
     const cardTitle = cardElement.querySelector(".card__title"); //имя карточки внутри шаблона
     const deleteButton = cardElement.querySelector(".card__delete-button"); //кнопка удаления внутри шаблона
 
     cardImage.src = link; //обозначаем, что ссылку на картинку будем получать из link
     cardTitle.textContent = name; //обозначаем, что текст картинки будем получать из name
+    cardImage.alt = name; //обозначаем, что альтренативный текст картинки будем получать из name
 
     deleteButton.addEventListener("click", deleteCard); //обработчик событий на кнопку удаления. при нажатии вызывается функция deleteCard
 
