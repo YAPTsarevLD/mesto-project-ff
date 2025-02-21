@@ -24,8 +24,8 @@ export function addCloseListeners() {
     });
   });
 
-  document.querySelectorAll('.popup__close').forEach((closeButton) => {
-    closeButton.addEventListener('click', (evt) => { //слушатель нажатия на кнопку закрытия (крестик)
+  document.querySelectorAll('.popup__close').forEach((popupCloseButton) => {
+    popupCloseButton.addEventListener('click', (evt) => { //слушатель нажатия на кнопку закрытия (крестик)
     const popup = evt.target.closest('.popup');
     closeModal(popup);
     });
