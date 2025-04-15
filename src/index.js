@@ -149,14 +149,6 @@ addCardButton.addEventListener("click", () => {
 // Включение валидации всех форм при загрузке
 enableValidation(validationConfig);
 
-// Пример для формы профиля
-const profileOpenButton = document.querySelector(".profile__edit-button");
-
-// profileOpenButton.addEventListener('click', () => {
-//   // Очистка ошибок при открытии
-//   clearValidation(profileForm, validationConfig);
-// });
-
 const profileImg = document.querySelector(".profile__image");
 
 Promise.all([getInitialCards(), getUserInfo()])
