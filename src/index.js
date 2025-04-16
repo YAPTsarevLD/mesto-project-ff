@@ -134,16 +134,11 @@ function handleNewCardSubmit(evt) {
 
 newCardForm.addEventListener("submit", handleNewCardSubmit); //прикрепляем обработчик к форме добавления карточки
 //добавляем слушатель открытия попапа
+
 addCardButton.addEventListener("click", () => {
   newCardForm.reset();
   clearValidation(newCardForm, validationConfig); //NEW
   openModal(newCardPopupForm);
-
-  const submitButton = newCardForm.querySelector(
-    validationConfig.submitButtonSelector
-  );
-  submitButton.classList.add(validationConfig.inactiveButtonClass);
-  submitButton.disabled = true;
 });
 
 // Включение валидации всех форм при загрузке

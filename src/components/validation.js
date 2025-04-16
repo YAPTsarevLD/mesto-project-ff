@@ -98,8 +98,9 @@ function clearValidation(form, settings) {
     hideInputError(input, errorElement, settings);
   });
 
+  // Деактивируем кнопку и добавляем класс неактивности
   submitButton.disabled = true;
-  submitButton.classList.remove(settings.inactiveButtonClass);
+  submitButton.classList.add(settings.inactiveButtonClass); // добавляем серый цвет
 }
 
 export { enableValidation, clearValidation, validationConfig };
